@@ -58,8 +58,6 @@ void Update()
 
 
 
-
-
         if (direccion == false)
         {
             if (transform.position.x <= 0)
