@@ -1,21 +1,33 @@
-﻿using System.Collections;
+﻿/*
+ Jonathan Castillo
+ Materia: Estructura de datos
+ Grupo: DAA06A
+ Profesor: Josue Isarel Rivas Días
+ Descripción breve de funcionamiento de codigo: El código tiene como función asignarle un movimiento a un objeto por medio de puntos 
+ para que este patrulle pero, al cercársele un enemigo pueda perseguirlo (cambio de estados)
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 //Se ponen los nombres del identificador de acción a utilizar
+
+    //Se declara la variable que representará al enemigo y a sus distintos modos de acción
 public enum EnemigoIA
 {
 Patrulla, Perseguir, Atacar
 }
 
 public class MovPuntosIA : MonoBehaviour
+    //Se le asignará al enemigo una velocidad, movimiento y objetivo a perseguir
 {
     public float velocidad;
     public Transform sierra;
     public Transform[] puntos;
     public Transform target;
     public int indiceTarget;
-    //esta almacena estado o ubicacion del jugador
+    //esta almacena estado o ubicacion del jugador en el mapa
     public Transform player;
     public EnemigoIA EstadoActual = new EnemigoIA();
    

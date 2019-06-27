@@ -1,8 +1,18 @@
-﻿using System.Collections;
+﻿/*
+ Jonathan Castillo
+ Materia: Estructura de datos
+ Grupo: DAA06A
+ Profesor: Josue Isarel Rivas Días
+ Descripción breve de funcionamiento de codigo: El código tiene como función asignarle un movimiento definido a un objeto, tomando como puntos 
+ de referencia objetos vacíos
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MovPuntos : MonoBehaviour
+    //Se debe declarar la velocidad que tendrá el objeto (llamado "sierra"), cómo se moverá y cuáles son los objetivos en los que va a posicionarse
 {
     public float velocidad;
     public Transform sierra;
@@ -15,7 +25,7 @@ public class MovPuntos : MonoBehaviour
     {
         //Se convierte en el elemento inicial el indice 1
         target = puntos[1];
-        //.position lee la posición
+        //.position lee la posición que tendrá el objeto a moverse
         sierra.position = target.position;
         velocidad = velocidad * Time.deltaTime;
         indiceTarget = 0;

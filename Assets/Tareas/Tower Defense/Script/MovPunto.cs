@@ -1,8 +1,18 @@
-﻿using System.Collections;
+﻿/*
+ Jonathan Castillo
+ Materia: Estructura de datos
+ Grupo: DAA06A
+ Profesor: Josue Isarel Rivas Días
+ Descripción breve de funcionamiento de codigo: El código tiene como función asignarle un movimiento definido a un objeto 
+ para que éste siga una guía al estilo tower defense
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MovPunto : MonoBehaviour
+    //Se declara la velocidad del objeto a mover, cuál será éste y sus objetivos
 {
     public float velocidad;
     public Transform sierra;
