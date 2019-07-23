@@ -19,7 +19,7 @@ public class Radar : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            TorretaRadar.estadoActual = TorretaIA.Ataque;
+            TorretaRadar.estadoActual = TurretIA.Ataque;
             StartCoroutine(TorretaRadar.MisilesAtaque());
             Debug.Log("Disparando");
         }

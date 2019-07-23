@@ -19,9 +19,9 @@ public enum TurretIA
 public class TorretaDisp : MonoBehaviour
 //Se declara qué objeto será el proyectil, de dónde saldrá y con qué fuerza
 {
-    public Rigidbody bala;
-    public Transform [] cañon;
-    public float fuerzadisparo;
+    public Rigidbody[] bala;
+    public Transform[] cañon;
+    public float fuerzaDisparo;
     public TurretIA estadoActual = new TurretIA();
     int ContadorMisiles;
     public int aumento = 0;
@@ -43,11 +43,11 @@ public class TorretaDisp : MonoBehaviour
     //Se declara que al entrar en el modo de ataque, la torreta dispare
     {
 
-        if (estadoActual==TurretIA.Ataque)
+        if (estadoActual == TurretIA.Ataque)
         {
 
-            ContadorMisiles = 0; 
-         
+            ContadorMisiles = 0;
+
         }
     }//fin update
 
@@ -70,7 +70,8 @@ public class TorretaDisp : MonoBehaviour
             if (ContadorMisiles != 9)
             {
                 StartCoroutine(MisilesAtaque());
-            }            else if (ContadorMisiles == 9)
+            }
+            else if (ContadorMisiles == 9)
             {
                 estadoActual = TurretIA.Buscando;
             }
@@ -94,17 +95,17 @@ public class TorretaDisp : MonoBehaviour
 //yield permite generar cada linea de ación dividida y secuenciada 
 
 
-  /*  for (int i = 0; i< 3; i++)
-            {
-                Rigidbody balapos = Instantiate(bala, cañon[i].position, cañon[i].rotation) as Rigidbody;
+/*  for (int i = 0; i< 3; i++)
+          {
+              Rigidbody balapos = Instantiate(bala, cañon[i].position, cañon[i].rotation) as Rigidbody;
 balapos.AddForce(cañon[i].forward* fuerzadisparo);
-                //El contador de misiles aumenta en 1 para que alcance la condicionante de 3 
-                ContadorMisiles = i + 1;
+              //El contador de misiles aumenta en 1 para que alcance la condicionante de 3 
+              ContadorMisiles = i + 1;
 
-                if (ContadorMisiles >= 3 && i >= cañon.Length -1)
-                {
-                    ContadorMisiles = 3;
-                    estadoActual = TurretIA.Buscando;
-                }
+              if (ContadorMisiles >= 3 && i >= cañon.Length -1)
+              {
+                  ContadorMisiles = 3;
+                  estadoActual = TurretIA.Buscando;
+              }
 
-            }*/
+          }*/

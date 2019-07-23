@@ -27,4 +27,10 @@ public class Vida : MonoBehaviour
     {
         vidaText.text = vida.ToString();
     }
+
+    
 }
+
+
+
+
